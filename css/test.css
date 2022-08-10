@@ -1,0 +1,23 @@
+:root {
+  --color__primary: #b4ddf0;
+  --color__secondary: #536390;
+  --color__mountain: #7ac1e4;
+  --color__mountain-top: #ceeaf6;
+}
+
+.top {
+  background-color: var(--color__primary);
+  height: 450px;
+  position: relative;
+}
+.top__mountain {
+  position: absolute;
+  bottom: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 50px solid var(--color__mountain);
+  z-index: 1;
+}
+.top__mountain--one {
+  left: 250px;
+}/*# sourceMappingURL=test.css.map */

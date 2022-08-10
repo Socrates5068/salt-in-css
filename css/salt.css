@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #b4ddf0;
+    --secondary-color: #536390;
+    --mountain: #7ac1e4;
+    --mountain-top: #ceeaf6;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #00004d;
+    --secondary-color: #818cab;
+    --mountain: #7ac1e4;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+}
+
+.top {
+    background-color: var(--primary-color);
+    height: 450px;
+    position: relative;
+}
+
+.mountain, .mountain-two, .mountain-three, .mountain-four {
+    position: absolute;
+    bottom: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid var(--mountain);
+    z-index: 1;
+}
+
+.mountain { 
+    left: 250px;
+    /* bottom: -20px; */
+    /* opacity: .3; */
+    z-index: 0;
+}
+
+.mountain-two {
+    left: 450px;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 75px solid var(--mountain);
+    z-index: 1;
+}
+
+.mountain-three { 
+    left: 550px;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 110px solid var(--mountain);
+}
+
+.mountain-four { 
+    left: 950px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 40px solid var(--mountain);
+}
+
+.mountain-top {
+    position: absolute;
+    right: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--mountain-top);
+    z-index: 2;
+}
+
+.mountain-cap-1, .mountain-cap-2 {
+    position: absolute;
+    top: 20px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--mountain-top);
+}
+
+.mountain-cap-1 { left: -18px; }
+
+.cloud, .cloud:before, .cloud:after {
+    position: absolute;
+    width: 70px;
+      height: 30px;
+      background: #fff;
+      -webkit-border-radius: 100px / 50px;
+      border-radius: 100px / 50px;
+  }
+  .cloud { 
+    bottom: 100px;
+    -webkit-animation: cloud 50s infinite linear;
+            animation: cloud 50s infinite linear;
+  }
+  @-webkit-keyframes cloud {
+      0%   { left: -100px; }
+      100% { left: 1000px; } 
+  }
+  @keyframes cloud {
+     
+      0%   { left: -100px; }
+      100% { left: 1000px; } 
+  }
+  .cloud:before {
+    content: '';
+    left: 50px;
+  }
+  .cloud:after {
+    content: '';
+    left: 25px;
+    top: -10px;
+  }

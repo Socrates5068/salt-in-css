@@ -1,0 +1,40 @@
+// light colors
+$primary-color: #b4ddf0
+$secondary-color: #536390
+$mountain: #7ac1e4
+$mountain-top: #ceeaf6
+
+// dark colors
+$primary-color--dark: #00004d
+$secondary-color--dark: #818cab
+$mountain--dark: #7ac1e4
+$mountain-top--dark: #ceeaf6
+
+// Tema principal
+:root
+    --color__primary: #{$primary-color}
+    --color__secondary: #{$secondary-color}
+    --color__mountain: #{$mountain}
+    --color__mountain-top: #{$mountain-top}
+// Tema oscuro
+    &--dark
+        --color__primary: #{$primary-color--dark}
+        --color__secondary: #{$secondary-color--dark}
+        --color__mountain: #{$mountain--dark}
+        --color__mountain-top: #{$mountain-top--dark}
+
+.top
+    background-color: var(--color__primary)
+    height: 450px
+    position: relative
+
+    &__mountain
+        position: absolute
+        bottom: 0
+        border-left: 80px solid transparent
+        border-right: 80px solid transparent
+        border-bottom: 50px solid var(--color__mountain)
+        z-index: 1
+
+        &--one
+            left: 250px
